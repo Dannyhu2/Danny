@@ -5,9 +5,12 @@ public class Main {
 
             arr[i] = (int) (Math.random() * 6 + 1);
 
-                System.out.println("Value: " + arr[i] );
+            System.out.println("Value: " + arr[i]);
+            if (arr[i] == 1) {
+                
 
             }
 
+        }
     }
 }
