@@ -25,17 +25,7 @@ public class Main {
                 total = total + num;
             }
             System.out.println(total);
-        }
-        System.out.println("**************");
-        int[] array3 = new int[10];
-        for (int i = 0; i < array2.length; i++) {
-            array3[i] = (int) (Math.random() * 100 + 1);
-            int average = 0;
-            int total = 0;
-            for (int num : array3) {
-                total = total + num;
-            }
-            System.out.println(total);
+            
         }
         System.out.println("**************");
     }
