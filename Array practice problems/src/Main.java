@@ -33,7 +33,12 @@ public class Main {
             System.out.println("total is: " + total);
             System.out.println("Average is " + (total / 10));
             System.out.println("****************");
-            System.out.println(array2[3]);
+            int temp = array2[1];
+            array2[1] = array2[2];
+            array2[2] = temp;
+            System.out.println(temp);
+            System.out.println(array2[1]);
+
 
 
 
