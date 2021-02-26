@@ -42,7 +42,7 @@ public static int remove(int[] array, int number) {
         System.out.println(remove(array, 2));
         System.out.println("**************** insert array *****************");
         System.out.println(insert(array, 2, 5));
-
+        
     }
     }
 
