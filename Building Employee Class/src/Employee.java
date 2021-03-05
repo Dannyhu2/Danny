@@ -1,51 +1,45 @@
 public class Employee {
     private int id;
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
     private int salary;
-    Employee(){
-        firstname = "";
-        lastname = "";
-        salary = 0;
-        int id = 0;
-    }
-    Employee(int id, String firstname, String lastname, int salary){
-        this.firstname = firstname;
-        this.id = id;
-        this.lastname = lastname;
-        this.salary = salary;
 
-    }
-
+    // setters, getters and other methods
     public int getId() {
         return id;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    public String getFirstName() {
+        return firstName;
     }
-
-    public String getFirstname() {
-        return firstname;
+    public String getLastName() {
+        return lastName;
     }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public int getSalary() {
+    public int getSalary(){
         return salary;
     }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public String getName(){
+        return firstName + " " + lastName;
     }
+    public int getAnnualSalary(){
+        return salary*12;
+    }
+    public int raiseSalary(int percent){
+        salary = (salary*(percent/100) + salary);
+        return salary;
+    }
+    public void setSalary(int newSalary){
+        this.salary = newSalary;
+    }
+//Constructor
+    Employee(int id, String firstName, String lastName, int salary){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+        System.out.println("Employee Created");
+    }
+    public String toString(){
+        return "Employee: \n id: " + id + "\n Name: " +firstName + " " + lastName + "\n salary: " + salary;
+    }
+
 }
