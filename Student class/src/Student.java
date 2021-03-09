@@ -9,8 +9,13 @@ public class Student {
         StudentID = StudentIDGenerator;
         StudentIDGenerator++;
         courses = new Course[8];
+
     }
-    
+    int total = 0;
+    public static int findAverage(int total){
+    total/index
+    return;
+    }
     public void addCourse(Course course){
         if(index==8){
             return;

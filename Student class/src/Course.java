@@ -2,7 +2,7 @@ public class Course {
     private int grade;
     private String subject;
 
-    Course() {
+    Course(String subject, int grade) {
         this.grade = grade;
         this.subject = subject;
     }
