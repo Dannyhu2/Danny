@@ -1,13 +1,10 @@
 public class Main {
     public static void main(String[] args){
-    for(int i = 0 ; i < 8;i++){
-        Student student = new Student();
+        Course[] array = new Course[8];
+        for (int i = 0; i < array.length; i++)
+            array[i] = new Course("math", 77);
+        Student student = new Student("Cody",700);
         System.out.println(student);
-    }
-
-        Course course = new Course("Math", 90);
-
-
-
+        System.out.println(array);
     }
 }

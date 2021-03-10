@@ -2,19 +2,16 @@ public class Student {
     private String firstName;
     private static int StudentIDGenerator = 0;
     private int StudentID;
+    private int totalMarks;
     Course[] courses;
     int index = 0;
-    Student(String firstName) {
+    Student(String firstName, int totalMarks) {
         this.firstName = firstName;
+        this.totalMarks = totalMarks/8;
         StudentID = StudentIDGenerator;
         StudentIDGenerator++;
         courses = new Course[8];
 
-    }
-    int total = 0;
-    public static int findAverage(int total){
-    total/index
-    return;
     }
     public void addCourse(Course course){
         if(index==8){
@@ -33,7 +30,7 @@ public class Student {
         return StudentIDGenerator;
     }
     public String toString(){
-        return "firstName: " + firstName + "\n StudentID: " +StudentID;
+        return "firstName: " + firstName + "\n StudentID: " +StudentID+ "\n Average Grade: " +totalMarks;
     }
 
     }
