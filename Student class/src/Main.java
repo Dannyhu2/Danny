@@ -5,6 +5,7 @@ public class Main {
             array[i] = new Course("math", 77);
         Student student = new Student("Cody",700);
         System.out.println(student);
-        System.out.println(array);
+        System.out.println(student.courses);
+        
     }
 }
