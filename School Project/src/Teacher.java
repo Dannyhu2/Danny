@@ -26,6 +26,6 @@ public class Teacher {
 
     }
     public String toString() {
-        return "Name: " + firstName + " " + lastName + "\n Subject: " + subject;
+        return "\nName: " + firstName + " " + lastName + " Subject: " + subject;
     }
 }

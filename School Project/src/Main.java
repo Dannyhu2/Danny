@@ -29,6 +29,10 @@ public class Main {
         //3 teachers
         Teacher holly = new Teacher("Holly", "Lang", "English");
         teachers.add(holly);
+        Teacher phill = new Teacher("Phill", "Swift", "Math");
+        teachers.add(phill);
+        Teacher troy = new Teacher("Troy", "Bolton", "Science");
+        teachers.add(troy);
 
         System.out.println(teachers.toString());
         System.out.println(students.toString());
