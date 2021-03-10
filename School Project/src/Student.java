@@ -29,6 +29,6 @@ public class Student {
         return StudentIDGenerator;
     }
     public String toString(){
-        return "name: "+firstName + " " + lastName + "\n grade: "+ grade;
+        return "\nname: "+firstName + " " + lastName + "\n grade: "+ grade + "\n Student ID: "+ StudentID;
     }
 }

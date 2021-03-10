@@ -12,7 +12,7 @@ public class Teacher {
         this.subject = newSubject;
     }
 
-    Teacher(String firstName, String lastName, String subject, int grade) {
+    Teacher(String firstName, String lastName, String subject) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.subject = subject;
