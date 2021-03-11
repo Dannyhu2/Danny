@@ -7,7 +7,7 @@ public class Course {
         this.subject = subject;
     }
     public String toString(){
-        return "Grade: "+grade + "\n Subject: "+subject;
+        return "\n Grade: "+grade + " Subject: "+subject;
     }
 
 
