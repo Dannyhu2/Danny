@@ -6,12 +6,16 @@ import javafx.scene.layout.AnchorPane;
 
 public class Controller {
     public Label labelNumber;
-
+    String op = "";
+    String firstNum = "";
+    String secondNum = "";
     public void setZero(ActionEvent actionEvent) {
 
     }
 
     public void setOne(ActionEvent actionEvent) {
+        String number=labelNumber.getText()+1;
+        labelNumber.setText(number);
     }
 
     public void setTwo(ActionEvent actionEvent) {
@@ -39,10 +43,9 @@ public class Controller {
     }
 
     public void add(ActionEvent actionEvent) {
-        int number = Integer.parseInt(labelNumber.getId());
-        number++;
-        String num = Integer.toString(number);
-        labelNumber.setId(num);
+        labelNumber.setText("");
+        op="*";
+
     }
 
     public void subtract(ActionEvent actionEvent) {
