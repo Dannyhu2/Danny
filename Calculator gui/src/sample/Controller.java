@@ -11,7 +11,14 @@ public class Controller {
     public ArrayList<String> numbers = new ArrayList<>();
     public ArrayList<String> operators = new ArrayList<>();
     String plus = "plus";
+    String minus = "minus";
+    String multiply = "multiply";
+    String firstNumber = "";
+    String secondNumber = "";
+    String total = "";
+    int a = 0;
     boolean lastButtonIsOperator = false;
+
     public void setZero(ActionEvent actionEvent) {
         addButtons(0);
     }
@@ -53,36 +60,59 @@ public class Controller {
     }
 
     public void add(ActionEvent actionEvent) {
-        numbers.add(labelNumber.getText());
-        operators.add(plus);
-        labelNumber.setText("");
-        System.out.println(numbers.get(numbers.size()+1));
-
-
-
+        addOperators(plus);
     }
 
     public void subtract(ActionEvent actionEvent) {
-        labelNumber.setText("");
+        addOperators(minus);
     }
 
     public void multiply(ActionEvent actionEvent) {
-        labelNumber.setText("");
-
+        addOperators(multiply);
     }
 
     public void equals(ActionEvent actionEvent) {
-        String number = numbers.get(1);
-        labelNumber.setText(String.valueOf(number));
-    }
+        numbers.add(labelNumber.getText());
+        for (int i = 0; i < numbers.size(); ) {
 
+            Integer.parseInt(numbers.get(i++));
+        }
+        for (int i = 0; i < operators.size(); ) {
+            if (operators.get(i++) == plus) {
+                int total = (Integer.valueOf(numbers.get(i++)) + Integer.valueOf(numbers.get(a)));
+                labelNumber.setText(Integer.toString(total));
+                a++;
+            }
+            if (operators.get(i++) == minus) {
+                int total = (Integer.valueOf(numbers.get(i++)) - Integer.valueOf(numbers.get(1)));
+                labelNumber.setText(Integer.toString(total));
+            }
+            if (operators.get(i++) == multiply) {
+                int total = (Integer.valueOf(numbers.get(i++)) * Integer.valueOf(numbers.get(1)));
+                labelNumber.setText(Integer.toString(total));
+            }
+        }
+    }
     public void clears(ActionEvent actionEvent) {
         labelNumber.setText("");
-
-
+        numbers.clear();
+        operators.clear();
+        lastButtonIsOperator = false;
     }
-    public void addButtons(int num){
-        String number=labelNumber.getText()+num;
+
+    public void addButtons(int num) {
+        String number = labelNumber.getText() + num;
         labelNumber.setText(number);
+        lastButtonIsOperator = false;
+    }
+
+    public void addOperators(String operator) {
+        if (lastButtonIsOperator == false) {
+            lastButtonIsOperator = true;
+            operators.add(operator);
+            numbers.add(labelNumber.getText());
+            System.out.println(numbers.size() + 1);
+            labelNumber.setText("");
+        }
     }
 }
