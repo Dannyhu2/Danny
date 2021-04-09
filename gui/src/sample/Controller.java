@@ -2,22 +2,18 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 public class Controller {
-    public Label labelname;
-    public Label number;
-    public AnchorPane labelNumber;
 
-    public void changename(ActionEvent actionEvent) {
-        labelname.setText("whatever");
-    }
+    public TextField textGetName;
+    public TextField textGetQuantity;
+    public TextField textGetCost;
+    public ListView productList;
 
-    public void add1(ActionEvent actionEvent) {
-        int number = Integer.parseInt(labelNumber.getId());
-        number++;
-        String num = Integer.toString(number);
-        labelNumber.setId(num);
+    public void addProduct(ActionEvent actionEvent) {
     }
 }
+
