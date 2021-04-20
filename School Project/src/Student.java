@@ -8,6 +8,9 @@ public class Student {
     public String getFirstName(){return firstName;}
     public String getLastName(){return lastName;}
     public int grade(){return grade;}
+    public void setGrade(int newGrade){
+        this.grade = newGrade;
+    }
 
 
     Student(String firstName, String lastName, int grade){

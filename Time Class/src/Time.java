@@ -106,6 +106,11 @@ public class Time {
         if(hour<10 && minute>10 && second>10) return "\n Time: 0" + hour + ":" + minute + ":" + second;
         if(hour<10 && minute>10 && second<10) return "\n Time: 0" + hour + ":" + minute + ":0" + second;
 
+        if(hour>10 && minute<10 && second<10) return "\n Time: " + hour + ":0" + minute + ":0" + second;
+        if(hour>10 && minute<10 && second>10) return  "\n Time: " + hour + ":0" + minute + ":" + second;
+        if(hour>10 && minute>10 && second>10) return "\n Time: " + hour + ":" + minute + ":" + second;
+        if(hour>10 && minute>10 && second<10) return "\n Time: " + hour + ":" + minute + ":0" + second;
+
             else
                 return "\n Time: " + hour + ":" + minute + ":" + second;
 

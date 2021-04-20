@@ -5,7 +5,7 @@ public class Main {
         System.out.println(clock);
         clock.setHour(9);
         System.out.println(clock);
-        clock.setTime(2,59,59);
+        clock.setTime(21,3,21);
         clock.nextSecond();
         clock.previousSecond();
         clock.nextSecond();
