@@ -1,5 +1,9 @@
 package sample;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Friend {
     private String name;
     private String phoneNumber;
@@ -26,5 +30,15 @@ public class Friend {
     }
     public String toString(){
         return name;
+    }
+    public void writeToFile() throws IOException{
+        FileWriter fw = new FileWriter("friends.txt",true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(name+",\r");
+        bw.write(phoneNumber+ "\r");
+        bw.write(Integer.toString(age)+";\r");
+        bw.write(";\r");
+        bw.close();
+
     }
 }

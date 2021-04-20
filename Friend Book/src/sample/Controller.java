@@ -1,11 +1,15 @@
 package sample;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
+import java.util.Observable;
 
 public class Controller {
 
@@ -49,5 +53,16 @@ public class Controller {
         labelAge.setText("Age: ");
         labelName.setText("Name ");
         labelPhoneNumber.setText("Phone Number: ");
+    }
+
+    public void saveFriend(ActionEvent actionEvent) throws IOException {
+        ObservableList<Friend> myList = listProducts.getItems();
+        for(Friend p : myList){
+        p.writeToFile();
+        }
+        listProducts.getItems().clear();
+    }
+
+    public void loadFriend(ActionEvent actionEvent) {
     }
 }
