@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String input= "Programmable"; //The you want to search for
+        String input= " computers "; //The word you want to search for (keep the spaces)
         ArrayList<String> lines = new ArrayList<>();
         FileReader fr = new FileReader("ProgrammingHistory.txt");
         BufferedReader br = new BufferedReader(fr);
