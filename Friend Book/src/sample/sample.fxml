@@ -20,7 +20,5 @@
       <Label fx:id="labelPhoneNumber" layoutX="437.0" layoutY="112.0" text="Phone Number:" />
       <Label fx:id="labelAge" layoutX="493.0" layoutY="169.0" text="Age:" />
       <Button layoutX="479.0" layoutY="220.0" mnemonicParsing="false" onAction="#deleteFriend" text="Delete" />
-      <Button layoutX="215.0" layoutY="346.0" mnemonicParsing="false" onAction="#saveFriend" text="Save" />
-      <Button layoutX="363.0" layoutY="346.0" mnemonicParsing="false" onAction="#loadFriend" text="Load" />
    </children>
 </AnchorPane>

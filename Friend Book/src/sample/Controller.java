@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Observable;
 
 public class Controller {
@@ -55,14 +56,5 @@ public class Controller {
         labelPhoneNumber.setText("Phone Number: ");
     }
 
-    public void saveFriend(ActionEvent actionEvent) throws IOException {
-        ObservableList<Friend> myList = listProducts.getItems();
-        for(Friend p : myList){
-        p.writeToFile();
-        }
-        listProducts.getItems().clear();
-    }
 
-    public void loadFriend(ActionEvent actionEvent) {
-    }
-}
+        }
