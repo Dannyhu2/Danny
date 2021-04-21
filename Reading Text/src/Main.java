@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String input= " computers "; //The word you want to search for (keep the spaces)
+        String input= " computer "; //The word you want to search for (keep the spaces)
         ArrayList<String> lines = new ArrayList<>();
         FileReader fr = new FileReader("ProgrammingHistory.txt");
         BufferedReader br = new BufferedReader(fr);
@@ -21,11 +21,12 @@ public class Main {
             }
         }
 
-
+//counter for the words being found
 for(int i = 0; i<lines.size();i++)
             if (lines.get(i++).contains(input.toString()) == true) {
             count++;
             }
+//checks if the line has the input word and finds its index position
         System.out.println("found "+ count++ +" "+ input.toString() +"'s" +" at ");
         if(lines.get(0).indexOf(input.toString())>-1) {
             System.out.println("line 1, index position " + lines.get(0).indexOf(input.toString()));
